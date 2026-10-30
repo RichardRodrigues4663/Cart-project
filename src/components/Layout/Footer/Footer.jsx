@@ -72,11 +72,11 @@ export default function Footer() {
                                 moda e utilidades para o seu dia a dia. Entrega rápida e segura para todo o Brasil.
                             </p>
                             <div className="social-links">
-                                <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-                                <a href="#" aria-label="Twitter"><i className="fa-brands fa-x-twitter"></i></a>
-                                <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
-                                <a href="#" aria-label="WhatsApp"><i className="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="Facebook" className="social-btn social-facebook"><i className="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram" className="social-btn social-instagram"><i className="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter" className="social-btn social-twitter"><i className="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="YouTube" className="social-btn social-youtube"><i className="fa-brands fa-youtube"></i></a>
+                                <a href="#" aria-label="WhatsApp" className="social-btn social-whatsapp"><i className="fa-brands fa-whatsapp"></i></a>
                             </div>
                         </div>
 
