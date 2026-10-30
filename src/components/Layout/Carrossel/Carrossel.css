@@ -1,37 +1,114 @@
-.div-content{
+.div-content {
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   justify-content: center;
-  width: 85%;
-  gap: 2em;
-  margin-top: 1em;
+  width: 100%;
+  max-width: 1400px;
+  margin: 1.5rem auto 0 auto;
+  padding: 0 1rem;
+  gap: 1.5rem;
 }
 
-.carousel-control-prev{
-  left: 10px;
+.carousel-wrapper,
+.carousel-wrapper2 {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0d4250;
+  position: relative;
 }
 
-.carousel-control-next{
-  right: 10px;
+.carousel-inner img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.setas-carousel{
-  color: black;
+.carousel-wrapper:hover .carousel-inner img,
+.carousel-wrapper2:hover .carousel-inner img {
+  transform: scale(1.015);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 42px;
+  height: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev {
+  left: 14px;
+}
+
+.carousel-control-next {
+  right: 14px;
+}
+
+.carousel-wrapper:hover .carousel-control-prev,
+.carousel-wrapper:hover .carousel-control-next,
+.carousel-wrapper2:hover .carousel-control-prev,
+.carousel-wrapper2:hover .carousel-control-next {
+  opacity: 1;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.setas-carousel {
+  color: var(--colorTheme);
+  font-size: 1.1rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 4px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  width: 22px;
+  border-radius: 12px;
+  background-color: var(--colorSecondaryLight);
 }
 
 @media (max-width: 1024px) {
-  .div-content{
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  width: 100%;
-  gap: 2em;
-  margin-top: 1em;
+  .div-content {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .carousel-inner img {
+    height: 200px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0.85;
+    width: 36px;
+    height: 36px;
+  }
 }
+
+@media (max-width: 600px) {
+  .carousel-inner img {
+    height: 160px;
+  }
 }

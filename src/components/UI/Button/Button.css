@@ -1,17 +1,26 @@
-button{
-    padding: 5px 15px;
-    border-radius: 6px;
-    color: black;
-    border: none;
-    transition: 0.3s;
+.btn-filter-pill {
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: #3b5260;
+  background-color: #f1f6f8;
+  border: 1px solid #dce6eb;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
 }
 
-button:hover{
-    background-color: var(--colorPurple);
-    color: white;
+.btn-filter-pill:hover {
+  background-color: #e4eff3;
+  color: var(--colorTheme);
+  border-color: #cbdbe2;
+  transform: translateY(-1px);
 }
 
-.active{
-    background-color: var(--colorPurple);
-    color: white;
+.btn-filter-pill.active {
+  background-color: var(--colorTheme);
+  color: white;
+  border-color: var(--colorTheme);
+  box-shadow: 0 4px 12px rgba(15, 76, 92, 0.25);
 }

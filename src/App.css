@@ -1,48 +1,128 @@
-:root{
+:root {
   --colorTheme: #0F4C5C;
+  --colorThemeDark: #092c35;
+  --colorThemeLight: #146175;
   --colorSecondary: #1a90ad;
-  --colorBackground:#0b3b47;
+  --colorSecondaryLight: #28a9c8;
+  --colorBackground: #0b3b47;
+  --colorBackgroundAlt: #07252c;
   --colorWhite: #ffffff;
   --colorPurple: #7f5ad4;
-  --colorGrey: #ebebeb;
+  --colorPurpleDark: #643eb8;
+  --colorPurpleLight: #f2eefa;
+  --colorGrey: #f3f6f8;
+  --colorGreyDark: #e4ebf0;
+  --colorTextDark: #1a2a32;
+  --colorTextMuted: #5c7482;
+  --colorSuccess: #10b981;
+  --colorDanger: #ef4444;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 18px rgba(11, 59, 71, 0.08);
+  --shadow-lg: 0 14px 28px rgba(11, 59, 71, 0.12);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
 }
 
-#root, body, html{
-  background-color: var(--colorBackground);
-  height: 100%;
-  margin: 0;
-  font-family: zain;
+* {
+  box-sizing: border-box;
 }
-/* Estilos para as seções de conteúdo */
+
+#root, body, html {
+  background-color: var(--colorBackground);
+  background-image: radial-gradient(circle at 50% 0%, #115769 0%, var(--colorBackground) 60%, var(--colorBackgroundAlt) 100%);
+  background-attachment: fixed;
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', 'Zain', system-ui, -apple-system, sans-serif;
+  color: var(--colorTextDark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Wrapper principal */
+.wrapper {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Seções de Conteúdo */
 .content-sections {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1060px;
+  flex: 1;
 }
 
 .offers-section,
 .for-you-section {
   background-color: var(--colorWhite);
-  border-radius: 8px;
-  padding-top: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.offers-section:hover,
+.for-you-section:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-family: 'Zain', 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--colorTheme);
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--colorSecondary);
-  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #e5eff3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
-/* Ajustes para o wrapper */
-.wrapper {
-  gap: 1em;
-  width: 100%;
-  padding: 0.5rem;
-  justify-content: center;
-  display: flex;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a90ad;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0F4C5C;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 1rem 0.75rem 2rem 0.75rem;
+    gap: 1rem;
+  }
+  
+  .offers-section,
+  .for-you-section {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
 }

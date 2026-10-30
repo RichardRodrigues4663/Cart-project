@@ -1,4 +1,22 @@
-.full-description{
-    margin-top: 3em;
-    grid-column: 1/-1;
+.full-description-box {
+  background-color: #f8fafc;
+  border: 1px solid #eef2f5;
+}
+
+.full-desc-title {
+  font-family: 'Zain', 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--colorTheme);
+}
+
+.full-desc-content {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.spec-item {
+  border: 1px solid #e2e8f0;
+  font-size: 0.9rem;
 }

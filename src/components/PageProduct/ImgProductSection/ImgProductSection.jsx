@@ -10,57 +10,44 @@ export default function ImgProductSection({ produto }) {
 
     // Verifica se o produto tem imagens
     if (!produto?.imagem || produto.imagem.length === 0) {
-        return <div className="d-flex justify-content-center">Sem imagens</div>
+        return (
+            <div className="d-flex justify-content-center align-items-center p-5 bg-light rounded-3 text-muted">
+                <i className="fa-regular fa-image me-2"></i> Sem imagens disponíveis
+            </div>
+        )
     }
 
     return (
-        <div className="d-flex justify-content-center flex-wrap">
-            {/* Carrossel Principal */}
-            <div className="carousel-container border">
-                <div 
-                    className="carousel-track" 
-                    style={{ transform: `translateX(-${imgAtual * 100}%)` }}
-                >
-                    {produto.imagem.map((img, index) => (
-                        <img 
-                            key={index} 
-                            src={img} 
-                            className="carousel-img" 
-                            alt={`Produto ${index + 1}`} 
-                            loading="lazy"
-                        />
-                    ))}
-                </div>
-                
-                {/* Indicadores (opcional) */}
-                {produto.imagem.length > 1 && (
-                    <div className="carousel-indicators">
-                        {produto.imagem.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`indicator ${index === imgAtual ? 'ativo' : ''}`}
-                                onClick={() => showImg(index)}
-                                aria-label={`Ir para imagem ${index + 1}`}
-                            />
-                        ))}
-                    </div>
-                )}
+        <div className="product-gallery-container d-flex flex-column align-items-center">
+            {/* Visualizador Principal */}
+            <div className="main-image-viewer">
+                <img 
+                    src={produto.imagem[imgAtual] || produto.imagem[0]} 
+                    className="main-product-img" 
+                    alt={`${produto.nome} foto ${imgAtual + 1}`} 
+                />
             </div>
 
             {/* Miniaturas */}
-            <div className='miniaturas gap-3'>
-                {produto.imagem.map((img, index) => (
-                    <div key={index}>
-                        <img 
-                            className={`miniatura ${index === imgAtual ? 'ativa' : ''}`}
-                            role='button' 
+            {produto.imagem.length > 1 && (
+                <div className='miniaturas-row mt-3 d-flex gap-2 justify-content-center flex-wrap'>
+                    {produto.imagem.map((img, index) => (
+                        <div 
+                            key={index}
+                            className={`miniatura-box ${index === imgAtual ? 'ativa' : ''}`}
                             onClick={() => showImg(index)}
-                            src={img} 
-                            alt={`Miniatura ${index + 1}`}
-                        />
-                    </div>
-                ))}
-            </div>
+                            role='button'
+                            tabIndex={0}
+                        >
+                            <img 
+                                className="miniatura-img"
+                                src={img} 
+                                alt={`Miniatura ${index + 1}`}
+                            />
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     )
 }

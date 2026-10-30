@@ -1,223 +1,190 @@
 /* Footer.css */
 .site-footer {
-    background-color: var(--colorSecondary);
-    margin-top: 3em;
-    font-size: 14px;
+  margin-top: 4rem;
+  font-size: 14px;
 }
 
-/* Seção de Serviços */
+/* Seção de Vantagens (Top) */
 .footer-top {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
-    padding: 20px 0;
+  background: linear-gradient(135deg, var(--colorThemeDark) 0%, var(--colorTheme) 100%);
+  color: white;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-top .service-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 0;
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.footer-top .service-icon {
-    font-size: 2rem;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    border-radius: 50%;
-    min-width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.service-icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #38bdf8;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
-.footer-top h5 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
+.service-item:hover .service-icon-box {
+  background: white;
+  color: var(--colorTheme);
+  transform: translateY(-2px);
 }
 
-.footer-top p {
-    margin: 0;
-    opacity: 0.9;
-    font-size: 0.9rem;
+.service-text h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.service-text p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
 }
 
 /* Seção Principal */
 .footer-main {
-    padding: 50px 0;
-    background-color: var(--colorSecondary);
+  padding: 3rem 0;
+  background-color: var(--colorThemeDark);
+  color: #e2e8f0;
 }
 
 .footer-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    position: relative;
-    padding-bottom: 10px;
+  font-family: 'Zain', 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: white;
+  position: relative;
+  padding-bottom: 8px;
 }
 
 .footer-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background: #3498db;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--colorSecondary);
 }
 
 .footer-about {
-    color: var(--colorWhite);
-    line-height: 1.6;
-    margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
-/* Links */
 .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
-    margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .footer-links a {
-    color: var(--colorWhite);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
 }
 
 .footer-links a:hover {
-    color: var(--colorPurple);
-    padding-left: 5px;
+  color: white;
+  padding-left: 6px;
 }
 
-/* Redes Sociais */
+.footer-category-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.footer-category-tag:hover {
+  background: var(--colorSecondary);
+  color: white;
+  border-color: var(--colorSecondary);
+}
+
 .social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  gap: 10px;
 }
 
 .social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    aspect-ratio: 1/1;
-    background: #f1f2f6;
-    border-radius: 50%;
-    color: #2c3e50;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .social-links a:hover {
-    background: var(--colorPurple);
-    color: white;
-    transform: translateY(-3px);
+  background: var(--colorPurple);
+  border-color: var(--colorPurple);
+  transform: translateY(-2px);
 }
 
-/* Métodos de Pagamento */
+/* Pagamentos e Segurança */
 .footer-payments {
-    background: #f8f9fa;
-    padding: 30px 0;
-    border-top: 1px solid #e9ecef;
-    border-bottom: 1px solid #e9ecef;
+  background: #061d23;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-payments h5 {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #2c3e50;
-    text-align: center;
+.payment-heading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.payment-methods, .security-badges {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.payment-methods img, .security-badges img {
-    height: 30px;
-    width: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-.payment-methods img:hover, .security-badges img:hover {
-    opacity: 1;
+.payment-badge,
+.security-badge {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Rodapé Inferior */
 .footer-bottom {
-    background: #2c3e50;
-    color: #bdc3c7;
-    padding: 20px 0;
-    font-size: 0.85rem;
+  background: #041418;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 1.25rem 0;
+  font-size: 0.85rem;
 }
-
-.footer-bottom p {
-    margin: 0;
-}
-
-.footer-bottom a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-top .service-item {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    .footer-main {
-        padding: 30px 0;
-    }
-    
-    .footer-title {
-        margin-top: 20px;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-    
-    .payment-methods, .security-badges {
-        gap: 10px;
-    }
-    
-    .payment-methods img, .security-badges img {
-        height: 25px;
-    }
-    
-    .footer-bottom .text-md-end {
-        text-align: left !important;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .footer-top .service-icon {
-        min-width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-}   

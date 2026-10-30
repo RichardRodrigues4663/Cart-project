@@ -1,3 +1,10 @@
-.suggestion{
-    grid-column: 1/-1;
+.suggestion-container {
+  width: 100%;
+}
+
+.suggestion-heading {
+  font-family: 'Zain', 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--colorTheme);
 }

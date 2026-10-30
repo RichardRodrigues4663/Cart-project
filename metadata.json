@@ -1,0 +1,7 @@
+{
+  "name": "Cart-project",
+  "description": "An e-commerce shopping cart web application featuring daily deals, product showcase, and shopping cart management.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

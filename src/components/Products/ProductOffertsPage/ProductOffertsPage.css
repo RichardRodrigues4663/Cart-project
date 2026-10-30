@@ -1,24 +1,10 @@
-.text-discont{
-    position: absolute;
-    color: white;
-    background-color: var(--colorTheme);
-    padding: 5px;
-    border-bottom-right-radius: 10px;
+.filter-buttons-bar {
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  border: 1px solid #eef2f5;
 }
 
-.btn-plus{
-  width: 100%;
-  padding: 10px;
-  background:#764ba2 ;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-plus:hover{
-  background: #2c193f;
-  color: white;
+.filter-label {
+  color: var(--colorTheme);
+  font-size: 0.9rem;
 }
